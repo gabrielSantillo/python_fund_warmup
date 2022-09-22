@@ -1,13 +1,19 @@
-list_of_strings = ['gabriel', 'natalia', 'chicago']
-
-for name in list_of_strings:
-    print(name)
-
+def filter_users_subscribed(users):
+    subscribed_users = []
+    for user in users:
+        if (user["is_subscribed"] == True):
+            subscribed_users.append(user)
+    return subscribed_users
 
 def print_string(name):
     if (name.startswith('g')):
         print("g found", name)
 
+
+list_of_strings = ['gabriel', 'natalia', 'chicago']
+
+for name in list_of_strings:
+    print(name)
 
 for name in list_of_strings:
     print_string(name)
@@ -25,11 +31,5 @@ list_of_users = [
     }
 ]
 
-
-def filter_users_subscribed(users):
-    subscribed_users = []
-    for user in users:
-        if (user["is_subscribed"] == True):
-            subscribed_users.append(user)
-
-    return subscribed_users
+subsribed_users = filter_users_subscribed(list_of_users)
+print(subsribed_users)
